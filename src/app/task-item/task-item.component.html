@@ -1,0 +1,19 @@
+<div class="message-item mat-elevation-z3">
+  <div class="message-title">
+    {{message.title}}
+  </div>
+  <div class="message-description">
+    {{message.description}}
+  </div>
+  <div class="btn-row">
+    <button mat-icon-button color="accent" (click)="edit()" *ngIf="!showLoader">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button color="warn" (click)="delete(message.id)" *ngIf="!showLoader">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" *ngIf="showLoader">
+      <mat-spinner diameter="30"></mat-spinner>
+    </button>
+  </div>
+</div>

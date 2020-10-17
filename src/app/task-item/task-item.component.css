@@ -1,0 +1,45 @@
+:host {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.message-item {
+  height: 200px;
+  width: 213px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form mat-form-field {
+  width: inherit;
+}
+
+.btn-row {
+  margin-top: auto;
+  justify-content: center;
+}
+
+.message-item-created{
+
+}
+
+.message-title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.message-title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100px;
+  margin-left: auto;
+  border-color: red;
+}
+
+.message-description {
+  white-space:pre-wrap;
+  overflow: auto;
+}
