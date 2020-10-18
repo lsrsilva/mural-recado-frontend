@@ -5,8 +5,6 @@ const PORT = process.env.PORT || 8080
 
 app.use(express.static(__dirname + '/dist/mural-recado-frontend'));
 
-app.listen(process.env.PORT || 8080);
-
 // PathLocationStrategy
 
 app.get('/*', (req, res) => {
