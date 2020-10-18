@@ -1,15 +1,18 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const PORT = process.env.PORT || 8080
 
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist/mural-recado-frontend'));
 
 app.listen(process.env.PORT || 8080);
 
 // PathLocationStrategy
 
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/index.html'));
+app.get('/*', (req, res) => {
+  res.sendFile(__dirname + '/dist/mural-recado-frontend/index.html');
 });
 
-console.log('Console listening! ' + __dirname);
+app.listen(PORT, () => {
+  console.log('Application listening on PORT: ' + PORT);
+});
